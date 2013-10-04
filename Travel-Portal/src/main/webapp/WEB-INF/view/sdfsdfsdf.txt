@@ -1,0 +1,15 @@
+formatter : function(
+																					cellvalue,
+																					options,
+																					rowObject) {
+																				var rowObject = arguments[2];
+																				if ($
+																						.isArray(rowObject)) {
+																					return rowObject[4].flightProvider
+																							+ rowObject[5].flightId;
+																				} else {
+																					return rowObject.flightEntity.flightProvider
+																							+ rowObject.flightEntity.flightId;
+
+																				}
+																			}
